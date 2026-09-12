@@ -1,0 +1,138 @@
+{
+	"name": "Folha de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 611566866889870
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Player",
+					"sid": 643358424963500,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 648212487288724
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 515694009294261,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 233604131170702,
+					"parameters": {
+						"object": "Spell",
+						"layer": "0",
+						"image-point": "1",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 672990073135649
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Spell",
+					"sid": 986352425302836,
+					"parameters": {
+						"object": "Goblin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Goblin",
+					"sid": 971789926857265
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Spell",
+					"sid": 865417821699357,
+					"parameters": {
+						"object": "SparkFlash",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Spell",
+					"sid": 824604081094136
+				}
+			],
+			"sid": 761400567250640
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 139959532627832
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "Goblin",
+					"sid": 377760737702483,
+					"parameters": {
+						"angle": "random(360)"
+					}
+				}
+			],
+			"sid": 150402950190719
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "Goblin",
+					"sid": 110246706482269
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Goblin",
+					"sid": 547272056576471,
+					"parameters": {
+						"x": "Player.X",
+						"y": "Player.Y"
+					}
+				}
+			],
+			"sid": 313297031604855
+		}
+	],
+	"sid": 612761662153485
+}
