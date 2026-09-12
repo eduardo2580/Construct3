@@ -1,0 +1,75 @@
+{
+	"name": "Folha de eventos 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Jogador",
+					"sid": 666292878442223,
+					"parameters": {
+						"object": "Tomate"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Tomate",
+					"sid": 655576441648786
+				}
+			],
+			"sid": 347498913293241
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 811681740647775,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Jogador",
+					"sid": 101815539714212,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 498089012127949
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Teclado",
+					"sid": 165982438870014,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Jogador",
+					"sid": 131590273984211,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 876265947050146
+		}
+	],
+	"sid": 672321515257195
+}
