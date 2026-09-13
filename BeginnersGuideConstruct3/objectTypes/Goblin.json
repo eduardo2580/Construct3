@@ -4,7 +4,15 @@
 	"sid": 780266484155395,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 817271662632853
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Bullet",

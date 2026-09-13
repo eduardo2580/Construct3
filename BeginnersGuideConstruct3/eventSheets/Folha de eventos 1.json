@@ -2,6 +2,16 @@
 	"name": "Folha de eventos 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 444368681538058
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -66,9 +76,13 @@
 			],
 			"actions": [
 				{
-					"id": "destroy",
+					"id": "subtract-from-instvar",
 					"objectClass": "Goblin",
-					"sid": 971789926857265
+					"sid": 846588616334336,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "1"
+					}
 				},
 				{
 					"id": "spawn-another-object",
@@ -132,6 +146,50 @@
 				}
 			],
 			"sid": 313297031604855
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Goblin",
+					"sid": 351529545193372,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Goblin",
+					"sid": 550520866732759,
+					"parameters": {
+						"object": "SparkFlash",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Goblin",
+					"sid": 505877650097669
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 407451055685172,
+					"parameters": {
+						"variable": "Score",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 465004613043239
 		}
 	],
 	"sid": 612761662153485
