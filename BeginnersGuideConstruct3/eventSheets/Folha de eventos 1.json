@@ -29,6 +29,14 @@
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 240814265217075,
+					"parameters": {
+						"text": "\"Score: \" & Score"
+					}
 				}
 			],
 			"sid": 648212487288724
@@ -190,6 +198,56 @@
 				}
 			],
 			"sid": 465004613043239
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 987960296015156,
+					"parameters": {
+						"interval-seconds": "3.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 246211057196053,
+					"parameters": {
+						"object-to-create": "Goblin",
+						"layer": "0",
+						"x": "LayoutWidth + 100",
+						"y": "random(LayoutHeight)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 664420092689124
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Goblin",
+					"sid": 914105058242356,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 330822072037309
+				}
+			],
+			"sid": 992235111074662
 		}
 	],
 	"sid": 612761662153485
